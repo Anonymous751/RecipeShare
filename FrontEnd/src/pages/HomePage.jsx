@@ -1,13 +1,10 @@
-
-
 const recipes = [
   {
     id: 1,
     title: "Classic Margherita Pizza",
     description:
       "A simple and delicious pizza topped with fresh tomatoes, mozzarella, and basil.",
-    image:
-      "https://images.pexels.com/photos/1640771/pexels-photo-1640771.jpeg",
+    image: "https://images.pexels.com/photos/1640771/pexels-photo-1640771.jpeg",
   },
   {
     id: 2,
@@ -44,9 +41,7 @@ const HomePage = () => {
         >
           Welcome to RecipeShare
         </h1>
-        <p
-          className="text-lg md:text-xl text-[color:var(--color-text-muted)] max-w-4xl mx-auto"
-        >
+        <p className="text-lg md:text-xl text-[color:var(--color-text-muted)] max-w-4xl mx-auto">
           Discover, share, and savor the best recipes from around the world.
           Whether you're a seasoned chef or just starting out, find inspiration
           here.
@@ -64,11 +59,7 @@ const HomePage = () => {
               border: `1px solid var(--color-border)`,
             }}
           >
-            <img
-              src={image}
-              alt={title}
-              className="w-full h-56 object-cover"
-            />
+            <img src={image} alt={title} className="w-full h-56 object-cover" />
             <div className="p-6">
               <h2
                 className="text-2xl font-bold mb-2"
@@ -76,7 +67,9 @@ const HomePage = () => {
               >
                 {title}
               </h2>
-              <p className="text-[color:var(--color-text-muted)]">{description}</p>
+              <p className="text-[color:var(--color-text-muted)]">
+                {description}
+              </p>
               <button
                 className="mt-4 bg-[color:var(--color-accent)] hover:bg-[color:var(--color-primary)] text-[color:var(--color-text-primary)] font-semibold px-4 py-2 rounded transition-colors duration-300"
                 aria-label={`View recipe for ${title}`}

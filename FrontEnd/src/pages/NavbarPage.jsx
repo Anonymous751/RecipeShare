@@ -1,4 +1,3 @@
-
 import { Link, NavLink } from "react-router-dom";
 import { FaUtensils } from "react-icons/fa";
 import DarkModeSwitch from "../components/DarkModeSwitch";
@@ -41,7 +40,9 @@ const Navbar = ({ darkMode, toggleTheme }) => {
                     color: isActive
                       ? "var(--color-primary)"
                       : "var(--color-text-primary)",
-                    borderColor: isActive ? "var(--color-primary)" : "transparent",
+                    borderColor: isActive
+                      ? "var(--color-primary)"
+                      : "transparent",
                     transition: "color 0.3s",
                   })}
                 >

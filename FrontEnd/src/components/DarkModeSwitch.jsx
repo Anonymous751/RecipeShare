@@ -1,4 +1,3 @@
-
 const DarkModeSwitch = ({ darkMode, toggleTheme }) => {
   return (
     <button

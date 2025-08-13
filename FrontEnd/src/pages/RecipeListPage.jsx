@@ -2,7 +2,8 @@ const recipes = [
   {
     id: 1,
     title: "Classic Margherita Pizza",
-    description: "Tomatoes, mozzarella, fresh basil, olive oil. A timeless classic.",
+    description:
+      "Tomatoes, mozzarella, fresh basil, olive oil. A timeless classic.",
     image: "https://images.pexels.com/photos/1640771/pexels-photo-1640771.jpeg",
   },
   {
@@ -54,7 +55,8 @@ const RecipeListPage = () => {
           Explore Delicious Recipes
         </h1>
         <p className="text-lg text-[color:var(--color-text-muted)] max-w-3xl mx-auto">
-          Browse a handpicked selection of mouth-watering recipes from around the world.
+          Browse a handpicked selection of mouth-watering recipes from around
+          the world.
         </p>
       </div>
 
@@ -67,7 +69,10 @@ const RecipeListPage = () => {
           >
             <img src={image} alt={title} className="w-full h-56 object-cover" />
             <div className="p-5">
-              <h2 className="text-2xl font-semibold mb-2" style={{ color: "var(--color-primary)" }}>
+              <h2
+                className="text-2xl font-semibold mb-2"
+                style={{ color: "var(--color-primary)" }}
+              >
                 {title}
               </h2>
               <p className="text-[color:var(--color-text-muted)] mb-4">

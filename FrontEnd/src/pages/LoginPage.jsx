@@ -25,16 +25,22 @@ const LoginPage = () => {
       });
 
       const data = await response.json();
+      console.log("Login response:", data);
 
       if (!response.ok) {
         alert(data.message || "Login failed");
       } else {
+        if (!data.token) {
+          alert("Token not received from server");
+          return;
+        }
+        localStorage.setItem("token", data.token);
         alert("Logged in successfully");
-        localStorage.setItem("token", data.token); // Save token
         resetForm();
-        navigate("/dashboard"); // Redirect
+        navigate("/dashboard");
       }
     } catch (error) {
+      console.error("Login error:", error);
       alert("Server error");
     } finally {
       setSubmitting(false);
@@ -67,7 +73,6 @@ const LoginPage = () => {
           >
             {({ isSubmitting }) => (
               <Form className="space-y-5">
-                {/* Email Field */}
                 <div>
                   <label className="block mb-1 font-medium">Email</label>
                   <Field
@@ -83,7 +88,6 @@ const LoginPage = () => {
                   />
                 </div>
 
-                {/* Password Field */}
                 <div className="relative">
                   <label className="block mb-1 font-medium">Password</label>
                   <Field
@@ -114,7 +118,6 @@ const LoginPage = () => {
                   />
                 </div>
 
-                {/* Submit Button */}
                 <button
                   type="submit"
                   disabled={isSubmitting}
